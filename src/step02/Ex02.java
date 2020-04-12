@@ -6,8 +6,6 @@ public class Ex02 {
 		// 1. 덧셈 연산자
 		System.out.println(10 + 3);
 
-		// 2.���� ������
-
 		// 2. 연결 연산자
 		// 1) "문자" + "문자" = "문자"
 		System.out.println("안녕" + "하세요");

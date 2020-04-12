@@ -1,68 +1,33 @@
 package step05;
 
+import java.util.Scanner;
+
 /*
- * # 제어문(Control Statement)
- * 1. 조건문 : if, switch-case
- * 2. 반복문 : for, while, do-while
- * 3. 보조 제어문 : break, continue
- * 
- *  # 조건문 if
- *  if(조건식){
- *  	조건식이 참(true)일 때 실행할 문장;
- *  }
+ * # 입력받기
+ * 1. import java.util.Scanner;
+ * 	  java.util패키지 안의 Scanner 클래스 파일을
+ *    현재 페이지로 불러온다.
+ * 2. scan 변수 설정
+ *    Scanner scan = new Scanner(System.in);
+ * 3. 안내문 작성
+ *    System.out.print("나이를 입력하세요 : ");
+ * 4. 입력받기
+ *    int age = scan.nextInt();
  */
+
 public class Ex01 {
+
 	public static void main(String[] args) {
-		if (true) {
-			System.out.println("실행 O");
-		}
+	Scanner sc = new Scanner(System.in);
+		
+		System.out.println("숫자를 입력하세요.");
+		int num = sc.nextInt();
+		System.out.println("입력하신 숫자는 " + num + "입니다.");
+		
+		System.out.print("나이를 입력하세요 : ");
+		int age = sc.nextInt();
+		System.out.println("당신의 나이는 " + age + "세 이군요!");
 
-		// if (false) {
-		// System.out.println("실행 X");
-		// }
-
-		// 예) 홀짝
-		int num = 8;
-		System.out.println(num % 2 == 0);
-		System.out.println(num % 2 == 1);
-
-		if (num % 2 == 0) {
-			System.out.println("짝수");
-		}
-		if (num % 2 == 1) {
-			System.out.println("홀수");
-		}
-
-		// 문제 1) 양수, 0, 음수 출력
-		num = -10;
-		if (num > 0) {
-			System.out.println("양수");
-		}
-		if (num == 0) {
-			System.out.println("0");
-		}
-		if (num < 0) {
-			System.out.println("음수");
-		}
-
-		// 문제 2) 4의 배수 출력
-		num = 12;
-		if (num % 4 == 0) {
-			System.out.println(num + "는 4의 배수입니다");
-		}
-		if (num % 4 != 0) {
-			System.out.println(num + "는 4의 배수가 아니다");
-
-		}
-
-		// 문제 3) 합격, 불합격 출력
-		int score = 87;
-		if (score >= 60) {
-			System.out.println("합격");
-		}
-		if (score < 60) {
-			System.out.println("불합격");
-		}
 
 	}
 

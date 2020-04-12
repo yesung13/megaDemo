@@ -14,7 +14,9 @@ public class Ex04 {
 		int kor = 100;
 		int eng = 87;
 		int math = 41;
-		int avg = (kor + eng + math) / 3;
+
+		int total = kor + eng + math;
+		double avg = total / 3.0d;
 
 		System.out.println("평균 : " + avg);
 		System.out.println(avg >= 60 && kor >= 50 && eng >= 50 && math >= 50);

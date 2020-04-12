@@ -17,13 +17,16 @@ public class Ex02 {
 		// 힌트2) 숫자 % 2 == 0 (짝수)
 		// 힌트2) 숫자 % 2 == 1 (홀수)
 		int num2 = 2;
-		System.out.println("¦��:" + (num2 % 2 == 0));
-		System.out.println("Ȧ��:" + (num2 % 2 == 1));
+		System.out.println("홀수:" + (num2 % 2 == 0));
+		System.out.println("짝수:" + (num2 % 2 == 1));
 
 		// 문제3)아래돈중 1000원짜리 이상화폐를 제외한
-		int money = 178600;
+		//1000원짜리가 3장 이상이면 true 출력
 
-		System.out.println("���: " + ((money / 1000) >= 3));
+		int money = 178600;
+        System.out.println((money % 5000 / 1000) >= 3);
+
+
 	}
 
 }
