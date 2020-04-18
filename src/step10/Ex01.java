@@ -6,7 +6,9 @@ public class Ex01 {
 
 	public static void main(String[] args) {
 
-		// 질문 : Math.random과 Random 차이와 Random은 잘 사용되는 클래스인가?
+		// Q : Math.random과 Random 차이와 Random은 잘 사용되는 클래스인가?
+		// A : 상황에 따라 사용하고 util 패키지를 많이 알면 좋음.
+		
 		Random ran = new Random();
 
 		// 예) 0 ~ 2 사이의 랜덤
