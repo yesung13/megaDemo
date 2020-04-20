@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 /*
  * # 가위바위보 게임[2단계]를
- *   if - else if 구문으로 변경해보자.
+ * if - else if 구문으로 변경해보자.
  */
 
 /*
