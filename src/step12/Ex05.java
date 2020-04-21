@@ -37,7 +37,8 @@ public class Ex05 {
 
 					cash = cash - deposit;
 					balance = balance + deposit;
-					System.out.println("입금이 완료되었습니다" + "\n =>입금 금액: " + deposit + "원" + "\n =>계좌 잔액: " + balance + "원");
+					System.out.println("입금이 완료되었습니다" + "\n =>입금 금액: " 
+					+ deposit + "원" + "\n =>계좌 잔액: " + balance + "원");
 
 					// 출금
 				} else if (selectMenu == 2) {
@@ -46,8 +47,8 @@ public class Ex05 {
 
 					cash = cash + withdraw;
 					balance = balance - withdraw;
-					System.out
-							.println("출금이 완료되었습니다." + "\n =>출금 금액: " + withdraw + "원" + "\n =>계좌 잔액: " + balance + "원");
+					System.out.println("출금이 완료되었습니다." + "\n =>출금 금액: " 
+					+ withdraw + "원" + "\n =>계좌 잔액: " + balance + "원");
 
 					// 조회
 				} else if (selectMenu == 3) {
