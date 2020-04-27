@@ -45,21 +45,26 @@ public class Ex01 {
 
 					} else if (acc == dbAcc2 && pw == dbPw2) {
 						log = 2;
-						System.out.println(dbAcc1 + " 님 환영합니다.");
+						System.out.println(dbAcc2 + " 님 환영합니다.");
 
 					} else {
 						System.out.println("ID 또는 PW가 틀립니다.");
 					}
 				} else {
-					System.out.println("이미 로그인된 계정입니다.");
+					if (log == 1) {
+						System.out.println("현재" + dbAcc1 + "님, 로그인 중...");
+					} else if (log == 2) {
+						System.out.println("현재" + dbAcc2 + "님, 로그인 중...");
+					}
+
 				}
 
 			} else if (sel == 2) {
-				if (log == 1 || log == 2) {
+				if (log != -1) {
 					log = -1;
-					System.out.println("로그아웃 완료");
-				} else if (log == -1) {
-					System.out.println("로그인을 해주세요.");
+					System.out.println("로그아웃 되었습니다.");
+				} else {
+					System.out.println("로그인 후 이용해주세요.");
 				}
 			} else if (sel == 0) {
 				run = false;
