@@ -21,8 +21,13 @@ public class Ex02 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		int myAcc = 1111;
+		int myMoney = 50000;
 
-		int myMoney = 0;
+		int yourAcc = 2222;
+		int yourMoney = 70000;
+
+		int money = 0;
 
 		boolean run = true;
 		while (run) {
@@ -30,31 +35,54 @@ public class Ex02 {
 			System.out.println("2.출금");
 			System.out.println("3.이체");
 			System.out.println("4.조회");
+			System.out.println("0.종료");
 
-			System.out.print("버튼 선택 : ");
+			System.out.print("메뉴 선택 : ");
 			int sel = sc.nextInt();
 
 			if (sel == 1) {
-				System.out.print("입금할 금액: ");
-				int money = sc.nextInt();
+				System.out.println("입금할 금액: ");
+				money = sc.nextInt();
 				myMoney = myMoney + money;
-				System.out.println(money + "원 입금이 완료되었습니다.");
-				System.out.println("잔액: " + myMoney + "원");
-				int deposit = myMoney;
+				System.out.println(money + "원 입금완료");
 
 			} else if (sel == 2) {
-				System.out.print("출금할 금액: ");
-				int withdraw = sc.nextInt();
-				myMoney = myMoney - withdraw;
+				System.out.println("출금할 금액: ");
+				money = sc.nextInt();
 
-				System.out.println("");
+				if (myMoney >= money) {
+					myMoney = myMoney - money;
+					System.out.println(money + "원 출금완료");
+				} else {
+					System.out.println("잔액이 부족합니다.");
+				}
 
 			} else if (sel == 3) {
+				System.out.print("이체할 계좌번호 입력: ");
+				int acc = sc.nextInt();
 
+				if (acc == yourAcc) {
+					System.out.print("이체할 금액: ");
+					money = sc.nextInt();
+
+					if (myMoney >= money) {
+						myMoney = myMoney - money;
+						yourMoney = yourMoney + money;
+						System.out.println(money + "원 이체완료");
+
+					} else {
+						System.out.println("잔액이 부족합니다.");
+					}
+				} else {
+					System.out.println("계좌번호를 다시 입력해주세요.");
+				}
 			} else if (sel == 4) {
+				System.out.println(myAcc + "님의 잔액: " + myMoney + "원");
+				System.out.println(yourAcc + "님의 잔액: " + yourMoney + "원");
 
-			} else {
-				System.out.println("잘못 입력하셨습니다.");
+			} else if (sel == 0) {
+				run = false;
+				System.out.println("프로그램 종료");
 			}
 
 		}
