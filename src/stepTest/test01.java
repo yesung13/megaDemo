@@ -7,7 +7,6 @@ package stepTest;
 public class test01 {
 	public static void main(String[] args) {
 
-		// 11:25 ~ 11:45(20분). 최소 화폐매수 10분
 
 		// 문제 1) 값 교체하기
 		int x = 10;
