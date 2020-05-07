@@ -38,6 +38,9 @@ public class Ex02 {
 		// 요금
 		int fee = 0;
 
+		// 이동칸 수
+		int move = 0;
+
 		boolean run = true;
 		while (run) {
 
@@ -65,7 +68,31 @@ public class Ex02 {
 				speed = sc.nextInt();
 
 			} else if (sel == 3) {
+				if (dir == 1) {
+					x = x + speed;
 
+				} else if (dir == 2) {
+					x = x - speed;
+
+				} else if (dir == 3) {
+					y = y - speed;
+
+				} else if (dir == 4) {
+					y = y + speed;
+
+				}
+				move = move + speed;
+			}
+			if (desX == x && desY == y) {
+				if (move % 2 == 1) {
+					fee = fee + 50;
+				}
+				fee = fee + move / 2 * 50;
+
+				System.out.println("목적지에 도착하였습니다.");
+				System.out.println("택시비는 " + fee + "원 입니다.");
+
+				run = false;
 			}
 
 		}
