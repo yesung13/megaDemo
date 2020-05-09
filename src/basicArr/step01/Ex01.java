@@ -1,34 +1,49 @@
 package basicArr.step01;
 
-// 변수    : 값 한개 저장
-// 배열    : (같은 종류의)값 여러개 저장
-// 클래스 : (여러 종류의)값 여러개 저장
-
+/*
+ * # 배열(array)
+ * 1. "같은  종류"의 데이터를 "여러개" 저장하기 위한 기술
+ * 2. 사용법
+ * 		int num = 10;
+ * 		int[] arr = new int[방의 개수];
+ * 		int arr[] = new int[방의 개수];
+ * 3. 인덱스(index)
+ * 		0부터 시작하는 방번호(index)가 부여된다
+ * 4. 주소 변수
+ */
 public class Ex01 {
+
 	public static void main(String[] args) {
-		
-		int num = 10;				// 변수
-		
-		//          힙 메모리에(new) 정수(int)형 방 3개를 생성해줘!
-		int[] arr = new int[3];		// 배열
-		
-		System.out.println(arr);
-		System.out.println(arr.length);
-		
+		// 1.일반변수(값 저장)
+		int num = 0;
+		num = 10;
+		System.out.println("num = " + num);
+
+		// 2.주소변수(주소 저장)
+		int[] arr = null;
+		arr = new int[5];
+		System.out.println("arr = " + arr);
+
 		System.out.println(arr[0]);
 		System.out.println(arr[1]);
 		System.out.println(arr[2]);
-		
-		// java.lang.ArrayIndexOutOfBoundsException: 3
-		// System.out.println(arr[3]);
-		
+		System.out.println(arr[3]);
+		System.out.println(arr[4]);
+		System.out.println();
 
-//		int[] scores = new int[3];
-//		scores[0] = 11;
-//		scores[1] = 23;
-//		scores[2] = 54;
-		
-		// 배열의 축약형		
-		int[] scores = {11, 23, 54};
+		// java.lang.ArrayIndexOutOfBoundsException: 5
+		// System.out.println(arr[5]);
+
+		arr[0] = 10;
+		arr[1] = 20;
+		arr[2] = 30;
+		arr[3] = 40;
+		arr[4] = 50;
+
+		for (int i = 0; i < 5; i++) {
+			System.out.println(arr[i]);
+		}
+		System.out.println();
 	}
+
 }
