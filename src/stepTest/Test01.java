@@ -4,7 +4,7 @@ package stepTest;
  * step01~05 정리
  * 
  */
-public class test01 {
+public class Test01 {
 	public static void main(String[] args) {
 
 

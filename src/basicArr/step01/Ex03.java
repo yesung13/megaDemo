@@ -10,21 +10,16 @@ public class Ex03 {
 		// 문제1) 10부터 50까지 arr 배열에 저장
 		// 정답1) 10 20 30 40 50
 		System.out.println("===10부터 50까지 arr 배열에 저장===");
-		arr[0] = 10;
-		arr[1] = 20;
-		arr[2] = 30;
-		arr[3] = 40;
-		arr[4] = 50;
+//		arr[0] = 10;
+//		arr[1] = 20;
+//		arr[2] = 30;
+//		arr[3] = 40;
+//		arr[4] = 50;
 
 		for (int i = 0; i < 5; i++) {
-//			arr[i] = 10 *
+			arr[i] = 10 * (i+1);
 			System.out.println(arr[i]);
 		}
-
-		
-		
-		
-		
 		   
 		// 문제2) 4의 배수만 출력
 		// 정답2) 20 40
