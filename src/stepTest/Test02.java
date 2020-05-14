@@ -118,32 +118,36 @@ public class Test02 {
 		// # 조건 (반복문 사용)
 		System.out.println("\n>>문제8");
 
-		int time = 0;
 		int day = 0;
-		int move = 0;
-		boolean run = true;
-		int height = 0;
+		double dDay = 0.0d;
 
+		int up = 4;
+		int down = -2;
+		int height = 0;
+		boolean run = true;
+		cnt = 0;
 		while (run) {
-			// if (time % 2 == 0) {
-			// move = move + 4;
-			//
-			// } else if (time % 2 == 1) {
-			// move = move - 2;
-			// }
 
 			if (height <= 11) {
-				move = move + 4;
-				height = height + move;
-				System.out.println(move);
-				day += 1;
+				if (cnt == 0) { // 낮
+					height = height + up;
+					day = day + 12;
+					cnt = 1;
+
+				} else if (cnt == 1) { // 밤
+					height = height + down;
+					day = day + 12;
+					cnt = 0;
+				}
+
 			} else {
 				run = false;
+				dDay = day / 24.0;
 				System.out.println("탈출");
+				System.out.println("달팽이가 탈출하는데 걸린 일자: " + dDay + "일");
 			}
 
 		}
-		System.out.println("달팽이가 탈출하는데 걸린 일자: " + day);
 
 	}
 }
