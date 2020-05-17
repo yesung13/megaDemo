@@ -23,17 +23,25 @@ import java.util.Random;
 public class Ex04 {
 
 	public static void main(String[] args) {
+		Random ran = new Random();
+
 		int[] check = new int[5];
 		int[] arr = new int[5];
 
-		// 랜덤 숫자 저장
-		Random ran = new Random();
-		for (int i = 0; i < arr.length; i++) {
-			arr[i] = ran.nextInt(5); // [0-4]
-			System.out.print(arr[i] + " ");
+		for (int i = 0; i < 5; i++) {
+			int r = ran.nextInt(5);
+			arr[i] = r;
 
+			if (check[r] == 0) {
+				check[r] = 1;
+			} else {
+				i = i - 1;
+			}
 		}
 
+		for (int i = 0; i < 5; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
 	}
-
 }
