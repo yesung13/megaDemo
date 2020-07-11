@@ -18,6 +18,8 @@ import java.util.Scanner;
  * com 에 comleft 또는 comright 저장(랜덤)
  * 
  * 3) 최종판정
+ * 
+ * 답없음
  */
 public class Ex01 {
 
