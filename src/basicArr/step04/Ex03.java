@@ -1,6 +1,5 @@
 package basicArr.step04;
 
-import java.util.Random;
 import java.util.Scanner;
 
 /*
