@@ -32,7 +32,8 @@ public class Ex02 {
 			System.out.println("===틱택토===");
 			for (int i = 0; i < 9; i++) {
 				if (game[i] == 0) {
-					System.out.print("[" + i + "]");
+					// System.out.print("[" + i + "]");
+					System.out.print("[ ]");
 				} else if (game[i] == 1) {
 					System.out.print("[X]");
 				} else if (game[i] == 2) {
@@ -52,7 +53,7 @@ public class Ex02 {
 			}
 
 			if (turn % 2 == 0) {
-				System.out.print("[p1]인덱스 입력:");
+				System.out.print("[p1]인덱스 입력: ");
 				int idx = sc.nextInt();
 
 				if (game[idx] == 0) {
@@ -77,6 +78,25 @@ public class Ex02 {
 				}
 			}
 
+			// 세로검사
+			for (int i = 0; i < 3; i++) {
+				if (game[i] == 1 && game[i + 3] == 1 && game[i + 6] == 1) {
+					win = 1;
+				} else if (game[i] == 2 && game[i + 3] == 2 && game[i + 6] == 2) {
+					win = 2;
+				}
+			}
+
+			// 대각선 검사
+			if (game[0] == 1 && game[4] == 1 && game[8] == 1) {
+				win = 1;
+			} else if (game[0] == 2 && game[4] == 2 && game[8] == 2) {
+				win = 2;
+			} else if (game[2] == 1 && game[4] == 1 && game[6] == 1) {
+				win = 1;
+			} else if (game[2] == 2 && game[4] == 2 && game[6] == 2) {
+				win = 2;
+			}
 		}
 
 	}

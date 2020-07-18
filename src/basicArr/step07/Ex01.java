@@ -18,7 +18,7 @@ import java.util.Scanner;
  * 
  * 중복숫자 금지(1) 활용문제
  */
-//1039
+
 public class Ex01 {
 
 	public static void main(String[] args) {
