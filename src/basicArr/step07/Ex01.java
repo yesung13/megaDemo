@@ -15,8 +15,10 @@ import java.util.Scanner;
  * 입력 : 1
  * 4 9 3 9
  * ...
+ * 
+ * 중복숫자 금지(1) 활용문제
  */
-//
+//1039
 public class Ex01 {
 
 	public static void main(String[] args) {
@@ -26,28 +28,36 @@ public class Ex01 {
 		int[] arr = new int[4];
 		int[] check = new int[4];
 
-		int cnt = 0;
-		for (int i = 0; i < 4; i++) {
-			int num = ran.nextInt(4) + 1;
-			arr[i] = num;
-			
-			if(arr[i]==num) {
-				
-			}
-
-			if (cnt == 2) {
-				i -= 1;
-			} else {
-				cnt += 1;
-				System.out.print(arr[i] + " ");
+		int i = 0;
+		while (i < 4) {
+			int r = ran.nextInt(4);
+			if (check[r] == 0) {
+				check[r] = 1;
+				arr[i] = r + 1;
+				i += 1;
 			}
 		}
-		System.out.println();
 
-		System.out.print("입력: ");
-		int idx = sc.nextInt();
+		int cnt = 1; // 포인트
 
-//		if(arr[idx]==check)
+		int j = 0;
+		while (j < 4) {
+			for (int k = 0; k < 4; k++) {
+				System.out.print(arr[k] + " ");
+			}
+			System.out.println();
+
+			System.out.print("입력[1~4]: ");
+			int idx = sc.nextInt();
+
+			// j는 답을 맞추지 못하면 무한 반복 실행
+			if (arr[idx-1] == cnt) {
+				arr[idx-1] = 9;
+				cnt += 1;
+				j += 1;
+			}
+
+		}
 
 	}
 

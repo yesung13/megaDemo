@@ -19,7 +19,7 @@ public class Ex01 {
 
 		int player = 0;
 
-		// 질문: 인덱스를 고정으로 두고 i++ 하거나, while문에 안에 첫번째 for문에 player = i를 두거나
+		// 질문: 인덱스를 고정으로 두고 i++ 하거나, while문에 안에 첫번째 for문에 player = i를 두거나 -> 변수의 활용을 중점으로 코딩하기
 		// for (int i = 0; i < 7; i++) {
 		// if (game[i] == 2) {
 		// player = i;
