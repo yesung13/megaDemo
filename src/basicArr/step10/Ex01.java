@@ -22,15 +22,9 @@ public class Ex01 {
 
 		boolean run = true;
 		while (run) {
-			System.out.print("계정 => ");
-			for (int i = 0; i < cnt; i++) {
-				System.out.print(accs[i] + " ");
-			}
-			System.out.println();
 
-			System.out.print("암호 => ");
 			for (int i = 0; i < cnt; i++) {
-				System.out.print(pws[i] + " ");
+				System.out.println((i + 1) + "." + accs[i] + ":" + pws[i]);
 			}
 			System.out.println();
 
@@ -67,7 +61,7 @@ public class Ex01 {
 					accs[cnt] = myAcc;
 					pws[cnt] = pw;
 					cnt += 1;
-					
+
 					System.out.println("가입완료!!!");
 				}
 
@@ -86,14 +80,14 @@ public class Ex01 {
 				if (check == -1) {
 					System.out.println("해당 계좌번호가 존재하지 않습니다.");
 				} else {
-					// 질문
+					// 중간 인덱스 값을 삭제 할 경우 뒤에 있는 값을 땡겨 오기 위함
 					for (int i = check; i < cnt - 1; i++) {
 						accs[i] = accs[i + 1];
 						pws[i] = pws[i + 1];
 					}
+					cnt -= 1;
 					accs[cnt] = 0;
 					pws[cnt] = 0;
-					cnt -= 1;
 				}
 
 			}

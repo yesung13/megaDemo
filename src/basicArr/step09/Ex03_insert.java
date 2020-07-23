@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 /*
  * # 배열 컨트롤러[1단계] : 삽입
+ * 
+ * 삽입을 하면 추가와 해당 자리의 원래 값이 뒤로 보내고 원래 자리에 새로운 값이 들어간다.
  */
-//1059
 public class Ex03_insert {
 
 	public static void main(String[] args) {
@@ -36,7 +37,7 @@ public class Ex03_insert {
 				System.out.print("삽입할 위치 입력 : ");
 				int idx = sc.nextInt();
 
-				if (cnt < idx || idx < 0) { // db 테이블에서 시퀀스 넘버랑 동일하다고 생각하면 된다.
+				if (cnt < idx || idx < 0) { // cnt의 하나 걷너 띈 수가 나오지 못하게 하거나, 음수가 나오지 못하게 함
 					System.out.println("해당 위치에는 삽입할 수 없습니다.");
 					continue;
 				}
