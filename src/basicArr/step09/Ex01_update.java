@@ -42,7 +42,7 @@ public class Ex01_update {
 
 				if (cnt == 5) {
 					System.out.println("더 이상 추가할 수 없습니다.");
-					continue;
+					continue; // while문으로 이동함
 				}
 
 				System.out.print("추가할 값 입력 : ");
