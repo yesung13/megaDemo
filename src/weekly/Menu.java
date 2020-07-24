@@ -1,4 +1,4 @@
-package stepTest;
+package weekly;
 
 import java.util.Random;
 
